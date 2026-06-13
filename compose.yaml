@@ -1,6 +1,7 @@
 services:
   panel:
-    build: .
+    # build: .
+    image: docker.io/energypatrikhu/pelican-panel:latest
     container_name: pelican-panel
     restart: unless-stopped
     user: 0:0

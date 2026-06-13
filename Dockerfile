@@ -1,6 +1,6 @@
 ARG PELICAN_PANEL_TAG=latest
 
-FROM ghcr.io/pelican-dev/panel:${PELICAN_PANEL_TAG}
+FROM ghcr.io/pelican-dev/panel:v${PELICAN_PANEL_TAG}
 
 #
 # These changes allow php-fpm to run as root and supervisord to use root user,
