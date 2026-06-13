@@ -38,12 +38,10 @@ jobs:
           echo "latest_pelican_panel=$LATEST_PELICAN_PANEL" >> $GITHUB_OUTPUT
 
           # Get current versions from git tags
-          PELICAN_PANEL_TAG=$(git tag -l "pelican-panel-*" | sort -V | tail -n1)
-
-          CURRENT_PELICAN_PANEL="${PELICAN_PANEL_TAG#pelican-panel-}"
+          CURRENT_PELICAN_PANEL=$(git tag -l | sort -V | tail -n1)
 
           # Set defaults if no tags exist
-          CURRENT_VUETORRENT="${CURRENT_VUETORRENT:-0.0.0}"
+          CURRENT_PELICAN_PANEL="${CURRENT_PELICAN_PANEL:-0.0.0}"
 
           echo "current_pelican_panel=${CURRENT_PELICAN_PANEL}" >> $GITHUB_OUTPUT
 
