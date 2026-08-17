@@ -2,7 +2,7 @@ services:
   panel:
     # build:
     #   dockerfile_inline: |
-    #     FROM ghcr.io/pelican-dev/panel:latest
+    #     FROM ghcr.io/pelican/panel:latest
     #     USER root
     #     RUN sed -i 's/^\[supervisord\]/\[supervisord\]\nuser=root/' /etc/supervisord.conf
     #     RUN sed -i 's/php-fpm -F/php-fpm -F -R/' /etc/supervisord.conf
