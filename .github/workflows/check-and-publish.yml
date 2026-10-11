@@ -34,7 +34,7 @@ jobs:
         id: version
         run: |
           # Get latest Pelican Panel version
-          LATEST_PELICAN_PANEL=$(curl -s "https://api.github.com/repos/pelican-dev/panel/releases/latest" | jq -r '.tag_name' | sed 's/^v//')
+          LATEST_PELICAN_PANEL=$(curl -s "https://api.github.com/repos/pelican/panel/releases/latest" | jq -r '.tag_name' | sed 's/^v//')
           echo "latest_pelican_panel=$LATEST_PELICAN_PANEL" >> $GITHUB_OUTPUT
 
           # Get current versions from git tags
