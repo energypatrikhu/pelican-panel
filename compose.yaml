@@ -17,8 +17,10 @@ services:
     env_file:
       - .env
     volumes:
+      - /etc/ssl/certs:/etc/ssl/certs:ro
       - ./data/panel/data:/pelican-data
       - ./data/panel/logs:/var/www/html/storage/logs
+      - ./data/panel/plugins:/var/www/html/plugins
     healthcheck:
       test: ["CMD", "curl", "http://localhost:80"]
       interval: 30s
